@@ -1,0 +1,23 @@
+ul {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+.spacer {
+  flex: 1 1 auto;
+}
+
+.header-title {
+  font-size: 3rem;
+}
+
+.header-btn {
+  font-size: 1.5rem;
+}
