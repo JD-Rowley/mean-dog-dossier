@@ -7,11 +7,15 @@ import { DogsService } from '../services/dogs.service';
   styleUrls: ['./about.component.css']
 })
 export class AboutComponent implements OnInit {
-  data: any = [];
+  dogs: any = [];
 
-  constructor() {}
+  constructor(private dogsService: DogsService) {}
 
   ngOnInit(): void {
+    this.dogsService.getDogGifs().subscribe(data => {
+      console.log(data);
+      this.dogs = data;
+    });
   }
 
 }
