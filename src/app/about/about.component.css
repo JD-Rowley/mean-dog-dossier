@@ -1,0 +1,32 @@
+.doggo {
+  margin: auto 3rem;
+}
+
+.doggo h2 {
+  font-size: 2rem;
+}
+
+.hero {
+  display: flex;
+}
+
+mat-card {
+  background-color: #80deea;
+}
+
+.hero-card {
+  max-width: 25vw;
+  margin: 0 auto 3rem auto;
+}
+
+.info {
+  display: flex;
+  background-color: #80deea;
+  min-height: 30vh;
+  margin: auto 3rem 3rem 3rem;
+}
+
+.info-description {
+  margin: auto 3rem;
+  font-size: 36px;
+}

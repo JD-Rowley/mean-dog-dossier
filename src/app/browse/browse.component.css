@@ -1,0 +1,39 @@
+mat-form-field {
+  display: block;
+  width: 30vw;
+  margin: 2rem auto;
+  padding-top: 21.5px;
+}
+
+mat-form-field button {
+  padding: auto;
+}
+
+hr {
+  margin: 0 3rem;
+}
+
+mat-grid-list {
+  margin: 3rem 4rem;
+}
+
+mat-grid-tile {
+  background-color: #ffffff;
+  border-radius: 5px;
+}
+
+mat-card {
+  background-color: #80deea;
+  width: calc(100%);
+  height: calc(100%);
+}
+
+mat-card a {
+  text-decoration: none;
+}
+
+mat-paginator {
+  background-color: #80deea;
+  color: black;
+  margin: 3rem;
+}

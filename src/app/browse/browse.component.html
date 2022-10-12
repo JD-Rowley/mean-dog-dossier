@@ -1,0 +1,19 @@
+<mat-form-field appearance="fill">
+  <mat-label>Search for a Breed</mat-label>
+  <input matInput type="search" name="search-breed" id="">
+  <button matSuffix mat-button><mat-icon >search</mat-icon></button>
+</mat-form-field>
+<hr>
+<mat-grid-list cols="3" gutterSize="3rem">
+  <mat-grid-tile>
+    <mat-card>
+      <a href="/">
+        <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
+        <mat-card-header>
+          <h2>Dog Breed</h2>
+        </mat-card-header>
+      </a>
+    </mat-card>
+  </mat-grid-tile>
+</mat-grid-list>
+<mat-paginator [length]="10" [pageSize]="12" aria-label="Select page"></mat-paginator>
