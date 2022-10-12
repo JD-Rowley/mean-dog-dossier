@@ -4,16 +4,16 @@
   <button matSuffix mat-button><mat-icon >search</mat-icon></button>
 </mat-form-field>
 <hr>
-<mat-grid-list cols="3" gutterSize="3rem">
-  <mat-grid-tile>
-    <mat-card>
-      <a href="/">
-        <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
+<mat-grid-list cols="4" gutterSize="3rem">
+  <mat-grid-tile *ngFor="let dog of dogs">
+    <a href="/">
+      <mat-card>
+        <img mat-card-image src={{dog.image.url}} alt={{dog.name}}>
         <mat-card-header>
-          <h2>Dog Breed</h2>
+          <h2>{{dog.name}}</h2>
         </mat-card-header>
-      </a>
-    </mat-card>
+      </mat-card>
+    </a>
   </mat-grid-tile>
 </mat-grid-list>
 <mat-paginator [length]="10" [pageSize]="12" aria-label="Select page"></mat-paginator>

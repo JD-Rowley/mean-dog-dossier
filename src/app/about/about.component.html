@@ -3,13 +3,8 @@
     <h2>Featured Doggos</h2>
   </div>
   <div class="hero">
-    <mat-card class="hero-card" *ngFor="let dog of dogs">
-      <a href="/">
-        <img mat-card-image src={{dog.url}} alt="Photo of a Shiba Inu">
-      </a>
-      <mat-card-header>
-        <mat-card-title>Shiba Inu</mat-card-title>
-      </mat-card-header>
+    <mat-card *ngFor="let dog of dogs">
+        <img mat-card-image src={{dog.url}} alt="Gif">
     </mat-card>
     <!-- <mat-card class="hero-card">
       <a href="/">

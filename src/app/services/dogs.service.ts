@@ -23,4 +23,8 @@ export class DogsService {
   getDogGifs() {
     return this.http.get('https://api.thedogapi.com/v1/images/search?mime_types=gif&limit=3');
   }
+
+  getAllBreeds() {
+    return this.http.get('https://api.thedogapi.com/v1/breeds');
+  }
 }

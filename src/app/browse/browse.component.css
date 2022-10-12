@@ -24,11 +24,9 @@ mat-grid-tile {
 
 mat-card {
   background-color: #80deea;
-  width: calc(100%);
-  height: calc(100%);
 }
 
-mat-card a {
+a {
   text-decoration: none;
 }
 

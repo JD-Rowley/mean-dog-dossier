@@ -13,7 +13,6 @@ export class AboutComponent implements OnInit {
 
   ngOnInit(): void {
     this.dogsService.getDogGifs().subscribe(data => {
-      console.log(data);
       this.dogs = data;
     });
   }
