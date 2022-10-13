@@ -9,10 +9,6 @@ mat-form-field button {
   padding: auto;
 }
 
-hr {
-  margin: 0 3rem;
-}
-
 mat-grid-list {
   margin: 3rem 4rem;
 }

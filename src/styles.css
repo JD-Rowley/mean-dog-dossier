@@ -7,3 +7,7 @@ html, body {
   margin: auto;
 }
 body { margin: 0; font-family: Amatic SC; }
+
+hr {
+  margin: 0 3rem;
+}
