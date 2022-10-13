@@ -6,14 +6,16 @@
 <hr>
 <mat-grid-list cols="4" gutterSize="3rem">
   <mat-grid-tile *ngFor="let dog of dogs">
-    <a href="/">
-      <mat-card>
-        <img mat-card-image src={{dog.image.url}} alt={{dog.name}}>
-        <mat-card-header>
+    <mat-card>
+      <a href="/">
+        <div class="dog-image">
+          <img mat-card-image src={{dog.image.url}} alt={{dog.name}}>
+        </div>
+        <div class="dog-breed">
           <h2>{{dog.name}}</h2>
-        </mat-card-header>
-      </mat-card>
-    </a>
+        </div>
+      </a>
+    </mat-card>
   </mat-grid-tile>
 </mat-grid-list>
-<mat-paginator [length]="10" [pageSize]="12" aria-label="Select page"></mat-paginator>
+<mat-paginator [pageSize]="20" [pageSizeOptions]="[12, 16, 20]" showFirstLastButtons=""></mat-paginator>
