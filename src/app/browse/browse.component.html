@@ -1,11 +1,11 @@
 <mat-form-field appearance="fill">
   <mat-label>Search for a Breed</mat-label>
-  <input matInput type="search" name="search-breed" id="">
+  <input matInput type="search" name="search-breed" [(ngModel)]="breed">
   <button matSuffix mat-button><mat-icon >search</mat-icon></button>
 </mat-form-field>
 <hr>
 <mat-grid-list cols="4" gutterSize="3rem">
-  <mat-grid-tile *ngFor="let dog of dogs">
+  <mat-grid-tile *ngFor="let dog of dogs |filter:breed">
     <mat-card>
       <a href="/">
         <div class="dog-image">

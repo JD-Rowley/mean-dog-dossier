@@ -8,6 +8,7 @@ import { DogsService } from '../services/dogs.service';
 })
 export class BrowseComponent implements OnInit {
   dogs: any = [];
+  public breed: string;
 
   constructor(private dogsService: DogsService) { }
 
