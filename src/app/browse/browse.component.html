@@ -6,16 +6,9 @@
 <hr>
 <mat-grid-list cols="4" gutterSize="3rem">
   <mat-grid-tile *ngFor="let dog of dogs |filter:breed">
-    <mat-card>
-      <a href="/">
-        <div class="dog-image">
-          <img mat-card-image src={{dog.image.url}} alt={{dog.name}}>
-        </div>
-        <div class="dog-breed">
-          <h2>{{dog.name}}</h2>
-        </div>
-      </a>
-    </mat-card>
+    <app-browse-list
+      [dog]="dog"
+    ></app-browse-list>
   </mat-grid-tile>
 </mat-grid-list>
 <mat-paginator [pageSize]="20" [pageSizeOptions]="[12, 16, 20]" showFirstLastButtons=""></mat-paginator>

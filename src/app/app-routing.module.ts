@@ -7,7 +7,7 @@ import { BrowseComponent } from './browse/browse.component';
 const routes: Routes = [
   { path: '', component: AboutComponent },
   { path: 'browse', component: BrowseComponent },
-  { path: 'breed/:id', component: BreedComponent }
+  { path: 'breed/:name', component: BreedComponent }
 ];
 
 @NgModule({

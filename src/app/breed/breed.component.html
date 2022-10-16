@@ -1,17 +1,17 @@
 <section>
-  <mat-card>
-    <img mat-card-image src="https://cdn2.thedogapi.com/images/BJa4kxc4X.jpg" alt="image">
+  <mat-card *ngFor="let item of dog">
+    <img mat-card-image src="https://cdn2.thedogapi.com/images/{{ item.reference_image_id }}.jpg" alt="image">
     <div>
       <mat-card-title>
-        <h2>Affenpinscher</h2>
-        <p>Toy</p>
+        <h2>{{ item.name }}</h2>
+        <p>Bred for {{ item.bred_for }}</p>
       </mat-card-title>
       <mat-card-content>
-        <p>Origin: Germany, France</p>
-        <p>Life Span: 10 - 12 years</p>
-        <p>Temperament: Stubborn, Curious, Playful, Adventurous, Active, Fun-loving</p>
-        <p>Height: 9 - 11.5 inches</p>
-        <p>Weight: 6 - 13 lbs.</p>
+        <p>Origin: {{ item.origin }}</p>
+        <p>Life Span: {{ item.life_span }}</p>
+        <p>Temperament: {{ item.temperament }}</p>
+        <p>Height: {{ item.height.imperial }} in.</p>
+        <p>Weight: {{ item.weight.imperial }} lbs.</p>
       </mat-card-content>
     </div>
   </mat-card>

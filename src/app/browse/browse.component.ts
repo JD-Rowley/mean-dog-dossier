@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { DogsService } from '../services/dogs.service';
 
 @Component({
@@ -9,14 +9,15 @@ import { DogsService } from '../services/dogs.service';
 export class BrowseComponent implements OnInit {
   dogs: any = [];
   public breed: string;
+  @Output() breedWasSelected = new EventEmitter<string>();
 
   constructor(private dogsService: DogsService) { }
 
   ngOnInit(): void {
     this.dogsService.getAllBreeds().subscribe(data => {
-      console.log(data);
       this.dogs = data;
+      console.log(this.dogs);
     })
   }
-
+  
 }

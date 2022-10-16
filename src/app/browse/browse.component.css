@@ -15,36 +15,7 @@ mat-grid-list {
 
 mat-grid-tile {
   border-radius: 5px;
-}
-
-mat-card {
-  background-color: #80deea;
-  width: calc(100%);
-  height: calc(100%);
-  padding: 0;
-}
-
-a {
-  text-decoration: none;
-}
-
-.dog-image {
-  height: 70%;
-  overflow: hidden;
-}
-
-.dog-image img {
-  object-fit: cover;
-  margin: auto;
-}
-
-.dog-breed {
-  background-color: #80deea;
-  height: 30%;
-}
-
-.dog-breed h2 {
-  padding: 0 0 0 2rem;
+  border: 1px solid #80deea;
 }
 
 mat-paginator {
