@@ -15,7 +15,7 @@ import { BrowseComponent } from './browse/browse.component';
 import { DogsService } from './services/dogs.service';
 import { FormsModule } from '@angular/forms';
 import { BreedComponent } from './breed/breed.component';
-import { BrowseListComponent } from './browse/browse-list/browse-list.component';
+import { CommentsComponent } from './breed/comments/comments.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +25,7 @@ import { BrowseListComponent } from './browse/browse-list/browse-list.component'
     AboutComponent,
     BrowseComponent,
     BreedComponent,
-    BrowseListComponent
+    CommentsComponent
   ],
   imports: [
     BrowserModule,

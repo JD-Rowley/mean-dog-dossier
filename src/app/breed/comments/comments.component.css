@@ -1,0 +1,17 @@
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+.comment-header {
+  display: flex;
+  justify-content: space-between;
+  background-color: rgba(0, 0, 0, 0.05);
+  border-radius: 5px;
+  padding: 0 1rem;
+}
+
+.actions {
+  display: flex;
+  justify-content: end;
+}

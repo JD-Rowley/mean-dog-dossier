@@ -9,13 +9,47 @@ mat-form-field button {
   padding: auto;
 }
 
+hr {
+  margin: 0 3rem;
+}
+
 mat-grid-list {
   margin: 3rem 4rem;
 }
 
 mat-grid-tile {
   border-radius: 5px;
-  border: 1px solid #80deea;
+}
+
+mat-card {
+  background-color: #80deea;
+  width: calc(100%);
+  height: calc(100%);
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+.dog-image {
+  height: 70%;
+  overflow: hidden;
+}
+
+.dog-image img {
+  object-fit: cover;
+  margin: auto;
+}
+
+.dog-breed {
+  background-color: #80deea;
+  height: 30%;
+}
+
+.dog-breed h2,
+.dog-breed p {
+  padding: 0 0 0 2rem;
 }
 
 mat-paginator {

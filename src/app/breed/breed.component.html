@@ -7,7 +7,6 @@
         <p>Bred for {{ item.bred_for }}</p>
       </mat-card-title>
       <mat-card-content>
-        <p>Origin: {{ item.origin }}</p>
         <p>Life Span: {{ item.life_span }}</p>
         <p>Temperament: {{ item.temperament }}</p>
         <p>Height: {{ item.height.imperial }} in.</p>
@@ -31,7 +30,8 @@
     <h1>This doggo needs some love! Type a comment above!</h1>
   </div>
   <div class="comments">
-    <div class="comment">
+    <app-comments></app-comments>
+    <!-- <div class="comment">
       <div class="meta">
         <h3>Person Name</h3>
       </div>
@@ -80,6 +80,6 @@
           perspiciatis architecto aliquid dolor quas ducimus quisquam odit accusamus quis nisi unde pariatur quae cupiditate
           totam.</p>
       </div>
-    </div>
+    </div> -->
   </div>
 </section>

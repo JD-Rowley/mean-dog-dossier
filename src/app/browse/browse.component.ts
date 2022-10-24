@@ -19,5 +19,5 @@ export class BrowseComponent implements OnInit {
       console.log(this.dogs);
     })
   }
-  
+
 }
