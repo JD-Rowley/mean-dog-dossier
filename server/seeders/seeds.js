@@ -27,7 +27,7 @@ db.once('open', async () => {
   // create comments
   const createdComments = [];
 
-  for(let i = 0; i < 40; i++) {
+  for(let i = 0; i < 20; i++) {
     const commentText = faker.lorem.words(Math.round(Math.random() * 20) + 1);
     const img = faker.image.animals();
 
@@ -49,8 +49,29 @@ db.once('open', async () => {
     createdComments.push(createdComment);
   }
 
+  for(let i = 0; i < 20; i++) {
+    const commentText = faker.lorem.words(Math.round(Math.random() * 20) + 1);
+
+    const randomUserIndex = Math.floor(Math.random() * userData.length);
+    const username = userData[randomUserIndex].username;
+    const userId = userData[randomUserIndex]._id;
+
+    const createdComment = await Comment.create({
+      commentText,
+      username
+    });
+
+    const updatedUser = await User.updateOne(
+      { _id: userId },
+      { $push: { comments: createdComment._id } }
+    );
+
+    createdComments.push(createdComment);
+  }
+
+
   // create replies
-  for(let i = 0; i < 100; i++) {
+  for(let i = 0; i < 50; i++) {
     const replyText = faker.lorem.words(Math.round(Math.random() * 20) + 1);
     const img = faker.image.animals();
 
@@ -66,6 +87,23 @@ db.once('open', async () => {
       { runValidators: true }
     )
   };
+
+  for(let i = 0; i < 50; i++) {
+    const replyText = faker.lorem.words(Math.round(Math.random() * 20) + 1);
+
+    const randomUserIndex = Math.floor(Math.random() * userData.length);
+    const username = userData[randomUserIndex].username;
+
+    const randomCommentIndex = Math.floor(Math.random() * createdComments.length);
+    const commentId = createdComments[randomCommentIndex]._id;
+
+    await Comment.updateOne(
+      { _id: commentId },
+      { $push: { replies: { replyText, username } } },
+      { runValidators: true }
+    )
+  };
+
 
   console.log('Data seeded!');
   process.exit(0);
